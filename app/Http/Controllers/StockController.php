@@ -62,7 +62,7 @@ class StockController extends Controller
         $stock = Stock::with('producto')->find($request->id);
         $proveedores = Proveedores::all();
 
-        return view('stock.update', compact('stock', 'producto', 'proveedores'));
+        return view('stock.update', compact('stock', 'proveedores'));
     }
 
     function update(Request $request) {
